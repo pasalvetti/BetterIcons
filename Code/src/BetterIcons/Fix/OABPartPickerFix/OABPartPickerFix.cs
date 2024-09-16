@@ -45,6 +45,12 @@ namespace BetterIcons.Fix.OABPartPickerFix
             changeIcon("BTN-Pods", "ICO-Category-Placeholder");
             changeIcon("BTN-Fuel", "icon_fuel");
             changeIcon("BTN-Engines", "icon_engines");
+            changeIcon("BTN-Structures", "icon_structures");
+            changeIcon("BTN-Couplers", "icon_couplers");
+            changeIcon("BTN-Payloads", "icon_payloads");
+            changeIcon("BTN-Aerodynamics", "icon_aero");
+            changeIcon("BTN-Ground", "icon_ground");
+            changeIcon("BTN-Thermal", "icon_thermal");
         }
 
     }
