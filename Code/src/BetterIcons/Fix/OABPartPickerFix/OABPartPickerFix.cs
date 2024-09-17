@@ -51,6 +51,8 @@ namespace BetterIcons.Fix.OABPartPickerFix
             changeIcon("BTN-Aerodynamics", "icon_aero");
             changeIcon("BTN-Ground", "icon_ground");
             changeIcon("BTN-Thermal", "icon_thermal");
+            changeIcon("BTN-Electrical", "icon_electrical");
+            changeIcon("BTN-Communications", "icon_communications");
         }
 
     }
