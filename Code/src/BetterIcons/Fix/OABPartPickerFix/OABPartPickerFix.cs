@@ -10,17 +10,11 @@ using static UnityEngine.UI.Image;
 
 namespace BetterIcons.Fix.OABPartPickerFix
 {
-    [Fix("xxx")]
     internal class OABPartPickerFix : BaseFix
     {
         static String pathToPartsPicker = "OAB(Clone)/HUDSpawner/HUD/widget_PartsPicker/mask_PartsPicker/GRP-Body/GRP-Part-Categories/";
         static int width = 48;
         static int height = 48;
-
-        public override void OnInitialized()
-        {
-            //HarmonyInstance.PatchAll(typeof(OABPartPickerFix));
-        }
 
         private static void changeIcon(String objectName, String imageName)
         {
