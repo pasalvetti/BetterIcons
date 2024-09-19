@@ -24,7 +24,7 @@ public class BetterIcons : BaseSpaceWarpPlugin
 
     protected Harmony HarmonyInstance { get; }
 
-    private void Awake()
+    /*private void Awake()
     {
         Type[] types;
         try
@@ -58,7 +58,7 @@ public class BetterIcons : BaseSpaceWarpPlugin
         }
 
         Logger.LogInfo($"{ModName} finished loading.");
-    }
+    }*/
 
     public override void OnInitialized()
     {
@@ -71,7 +71,7 @@ public class BetterIcons : BaseSpaceWarpPlugin
         //}
     }
 
-    private bool LoadFix(Type type)
+    /*private bool LoadFix(Type type)
     {
         if (!Config.IsFixEnabled(type))
         {
@@ -88,5 +88,5 @@ public class BetterIcons : BaseSpaceWarpPlugin
         _fixes.Add(fix);
 
         return true;
-    }
+    }*/
 }
