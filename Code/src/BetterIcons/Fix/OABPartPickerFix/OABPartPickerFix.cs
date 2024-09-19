@@ -19,7 +19,7 @@ namespace BetterIcons.Fix.OABPartPickerFix
 
         public override void OnInitialized()
         {
-            HarmonyInstance.PatchAll(typeof(OABPartPickerFix));
+            //HarmonyInstance.PatchAll(typeof(OABPartPickerFix));
         }
 
         private static void changeIcon(String objectName, String imageName)

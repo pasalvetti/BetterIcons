@@ -1,9 +1,11 @@
 using System.Reflection;
 using BepInEx;
 using BetterIcons.Fix;
+using BetterIcons.Fix.OABPartPickerFix;
 using JetBrains.Annotations;
 using SpaceWarp;
 using SpaceWarp.API.Mods;
+using HarmonyLib;
 
 namespace BetterIcons;
 
@@ -19,6 +21,8 @@ public class BetterIcons : BaseSpaceWarpPlugin
     internal new static Configuration Config;
 
     private readonly List<BaseFix> _fixes = new();
+
+    protected Harmony HarmonyInstance { get; }
 
     private void Awake()
     {
@@ -58,10 +62,13 @@ public class BetterIcons : BaseSpaceWarpPlugin
 
     public override void OnInitialized()
     {
-        foreach (var fix in _fixes)
-        {
-            fix.OnInitialized();
-        }
+        //HarmonyInstance = new Harmony(GetType().FullName);
+        //HarmonyInstance.PatchAll(typeof(OABPartPickerFix));
+        Harmony.CreateAndPatchAll(typeof(OABPartPickerFix), (string)null);
+        //foreach (var fix in _fixes)
+        //{
+        //  fix.OnInitialized();
+        //}
     }
 
     private bool LoadFix(Type type)
