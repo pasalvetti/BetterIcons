@@ -1,7 +1,5 @@
 using System.Reflection;
 using BepInEx;
-using BetterIcons.Fix;
-using BetterIcons.Fix.OABPartPickerFix;
 using JetBrains.Annotations;
 using SpaceWarp;
 using SpaceWarp.API.Mods;
@@ -17,16 +15,11 @@ public class BetterIcons : BaseSpaceWarpPlugin
     [PublicAPI] public const string ModName = MyPluginInfo.PLUGIN_NAME;
     [PublicAPI] public const string ModVer = MyPluginInfo.PLUGIN_VERSION;
 
-    private static readonly Assembly Assembly = typeof(BetterIcons).Assembly;
-    internal new static Configuration Config;
-
-    private readonly List<BaseFix> _fixes = new();
-
     protected Harmony HarmonyInstance { get; }
 
     public override void OnInitialized()
     {
-        Harmony.CreateAndPatchAll(typeof(OABPartPickerFix), (string)null);
+        Harmony.CreateAndPatchAll(typeof(BetterIconsPatch), (string)null);
     }
 
 }

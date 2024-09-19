@@ -1,29 +1,25 @@
 ﻿using HarmonyLib;
-using KSP.Map;
-using KSP.Messages;
 using KSP.OAB;
 using RTG;
-using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.UI.Image;
 
-namespace BetterIcons.Fix.OABPartPickerFix
+namespace BetterIcons
 {
-    internal class OABPartPickerFix : BaseFix
+    internal class BetterIconsPatch
     {
-        static String pathToPartsPicker = "OAB(Clone)/HUDSpawner/HUD/widget_PartsPicker/mask_PartsPicker/GRP-Body/GRP-Part-Categories/";
+        static string pathToPartsPicker = "OAB(Clone)/HUDSpawner/HUD/widget_PartsPicker/mask_PartsPicker/GRP-Body/GRP-Part-Categories/";
         static int width = 48;
         static int height = 48;
 
-        private static void changeIcon(String objectName, String imageName)
+        private static void changeIcon(string objectName, string imageName)
         {
             GameObject gameObject = GameObject.Find(pathToPartsPicker + objectName + "/");
             Image image = gameObject.GetChild(imageName).GetComponent<Image>();
             Debug.Log(imageName + " image has been found: " + image.name);
             Texture2D texture2D = new Texture2D(width, height);
             texture2D.LoadImage(File.ReadAllBytes("./BepInEx/plugins/BetterIcons/" + imageName + ".png"));
-            image.sprite = Sprite.Create(texture2D, new Rect(0.0f, 0.0f, (float)width, (float)height), new Vector2(0.0f, 0.0f));
+            image.sprite = Sprite.Create(texture2D, new Rect(0.0f, 0.0f, width, height), new Vector2(0.0f, 0.0f));
             List<GameObject> children = gameObject.GetAllChildren();
             foreach (GameObject child in children)
             {
