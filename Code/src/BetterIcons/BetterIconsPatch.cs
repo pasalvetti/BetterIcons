@@ -44,6 +44,7 @@ namespace BetterIcons
             changeIcon("BTN-Electrical", "icon_electrical");
             changeIcon("BTN-Communications", "icon_communications");
             changeIcon("BTN-Science", "icon_science");
+            changeIcon("BTN-Utilities", "icon_utilities");
         }
 
     }
