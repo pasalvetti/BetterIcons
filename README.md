@@ -8,6 +8,8 @@ I'm taking this opportunity to make the icons less pixelated because this style 
 
 ## Pictures
 
+![Before/After in 0.1](https://github.com/pasalvetti/BetterIcons/blob/main/Asset/Communication/BeforeAfter_0.1.png?raw=true)
+
 ## Known Issues
 - Icons are no longer consistent with the Part Managers
 ## Installation
