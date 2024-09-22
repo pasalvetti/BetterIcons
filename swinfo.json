@@ -6,7 +6,7 @@
   "description": "",
   "source": "https://github.com/pasalvetti/bettericons",
   "version": "0.1.0",
-  "version_check": "",
+  "version_check": "https://raw.githubusercontent.com/pasalvetti/BetterIcons/refs/heads/main/swinfo.json",
   "ksp2_version": {
     "min": "0.2.2",
     "max": "*"
