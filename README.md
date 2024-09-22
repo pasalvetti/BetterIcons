@@ -11,7 +11,7 @@ I'm taking this opportunity to make the icons less pixelated because this style 
 ![Before/After in 0.1](https://github.com/pasalvetti/BetterIcons/blob/main/Asset/Communication/BeforeAfter_0.1.png?raw=true)
 
 ## Known Issues
-- Icons are no longer consistent with the Part Managers
+- Icons are no longer consistent with the Part Managers and other windows.
 ## Installation
 1. Open the game folder by right-clicking on the game in your Steam library, selecting "Manage," and then clicking "Browse local files."
 2. Install the [Space Warp + BepinEx plugin](https://spacedock.info/mod/3277/Space%20Warp%20+%20BepInEx) (available on CKAN).
