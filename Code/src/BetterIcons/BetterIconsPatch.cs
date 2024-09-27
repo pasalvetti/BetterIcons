@@ -9,22 +9,22 @@ namespace BetterIcons
     internal class BetterIconsPatch
     {
         static string pathToPartsPicker = "OAB(Clone)/HUDSpawner/HUD/widget_PartsPicker/mask_PartsPicker/GRP-Body/GRP-Part-Categories/";
-        static int width = 48;
-        static int height = 48;
+        static readonly int width = 48;
+        static readonly int height = 48;
 
         private static void changeIcon(string objectName, string imageName)
         {
             GameObject gameObject = GameObject.Find(pathToPartsPicker + objectName + "/");
             Image image = gameObject.GetChild(imageName).GetComponent<Image>();
-            Debug.Log(imageName + " image has been found: " + image.name);
+            //Debug.Log(imageName + " image has been found: " + image.name);
             Texture2D texture2D = new Texture2D(width, height);
             texture2D.LoadImage(File.ReadAllBytes("./BepInEx/plugins/BetterIcons/" + imageName + ".png"));
             image.sprite = Sprite.Create(texture2D, new Rect(0.0f, 0.0f, width, height), new Vector2(0.0f, 0.0f));
-            List<GameObject> children = gameObject.GetAllChildren();
-            foreach (GameObject child in children)
-            {
-                Debug.Log("child: " + child.name);
-            }
+            //List<GameObject> children = gameObject.GetAllChildren();
+            //foreach (GameObject child in children)
+            //{
+            //    Debug.Log("child: " + child.name);
+            //}
         }
 
         [HarmonyPatch(typeof(AssemblyPartsPicker), nameof(AssemblyPartsPicker.Start))]
